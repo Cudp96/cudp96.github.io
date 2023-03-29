@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="/cudp.96.github.io/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -31,7 +31,7 @@
           <i class="fa-solid fa-code" style="font-size: 36px"></i>
           <span> Sudeep's Portfolio</span>
         </div>
-        <div class="mid-navbar">
+        <div class="mid-navbar" >
           <ul>
             <li>
               <a href="" class="active">
@@ -39,20 +39,36 @@
               >
             </li>
             <li>
-              <a href=""> <i class="fas fa-smile-wink"></i> About Me |</a>
+              <a href="#aboutme"> <i class="fas fa-smile-wink"></i> About Me |</a>
             </li>
           </ul>
         </div>
-        <div class="right-navbar">
-          <a href="/cudp.96.github.io/about.html"> <i class="fas fa-phone"></i> Contacts </a>
+        <div class="right-navbar" >
+          <a href="/Portfoli/about.html"> <i class="fas fa-phone    "></i> Contacts </a>
+          <div class="toggle_btn">
+
+            <i class="fas fa-bars " onclick="openmenu()"></i>
+            
+            
+          
+          </div>
         </div>
+        
       </div>
+      <div class="dropdown-nav ">
+        <ul>
+          <li><a href="/Portfoli/index.html">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="/Portfoli/about.html">Contact</a></li>
+        </ul>
+      </div>
+     
     </nav>
     <div class="container">
       <div class="description">
         <h1>
           I'm Sudeep <span>Shrestha .</span>
-          <p>I am an front-end web developer aspirant.</p>
+          <p  class="typed">I am an front-end web developer aspirant.</p>
         </h1>
       </div>
       <div class="photo">
@@ -60,6 +76,7 @@
         <!-- <img src="/assets/shape.png" alt="" class="shape"> -->
       </div>
     </div>
+    <section  id="aboutme">
     <div class="about">
       <h1>About Me</h1>
       <ul>
@@ -78,5 +95,20 @@
         inventore.
       </p>
     </div>
+  </section>
   </body>
+  <script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const dropDownMenu = document.querySelector('.dropdown-nav')
+    
+    toggleBtn.onclick = function(){
+      dropDownMenu.classList.toggle('open')
+      const isOpen = dropDownMenu.classList.contains('open')
+
+      toggleBtnIcons.classList  = isOpen
+      ?'fas fa-minus-circle '
+      : 'fas fa-xmark'
+    }
+  </script>
 </html>
